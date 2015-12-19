@@ -97,6 +97,6 @@ function initMap() {
   });
 }
 </script>
-<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBuCmbMEyBhm1J7CgKiJBKMK8SjKNyfJjg&libraries=places&signed_in=true&callback=initMap"
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuCmbMEyBhm1J7CgKiJBKMK8SjKNyfJjg&libraries=places&signed_in=true&callback=initMap"
 async defer></script>
 @endsection
