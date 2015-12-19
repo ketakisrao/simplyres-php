@@ -194,7 +194,7 @@ body {
             <h1 class="cover-heading">SimplyRes!</h1>
             <p class="lead">SimplyRes allows you to make reservations at restaurants, SimplyReserve!</p>
             <p class="lead">
-              <a href="../dashboard/" class="btn btn-lg btn-default">Get Started!</a>
+              <a href="/home/" class="btn btn-lg btn-default">Get Started!</a>
             </p>
           </div>
 
