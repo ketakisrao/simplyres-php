@@ -26,6 +26,7 @@
       </div>
       <input type="submit" id="btn-book" class="btn btn-warning" value="Book!">
     </form>
+<br><br>
 </div>
     <style>
       html, body {
