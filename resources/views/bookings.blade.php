@@ -3,8 +3,6 @@
 @section('content')
 <H1>Congratulations on your first Laravel page!!</H1>
   <div class="container" >
-
-    {{ if $bookings }}
     <div class="table-responsive">          
       <table class="table">
         <thead>
@@ -28,8 +26,6 @@
       </table>
     </div>
 
-    {% else %}
     <p>You do not have any bookings, <strong>Make your first one now by clicking on dashboard!</strong><p>
-      {% endif %}
     </div>
 @endsection
