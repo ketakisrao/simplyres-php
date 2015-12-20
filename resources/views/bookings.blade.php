@@ -14,14 +14,14 @@
           </tr>
         </thead>
         <tbody>
-          @foreach
+          @foreach($bookings as $booking)
           <tr>
-            <td>{{$bookings->restaurant_name}}</td>
-            <td>{{$bookings->location}}</td>
-            <td>{{$bookings->date}}</td>
-            <td>{{$bookings->time}}</td>
+            <td>{{$booking->restaurant_name}}</td>
+            <td>{{$booking->location}}</td>
+            <td>{{$booking->date}}</td>
+            <td>{{$booking->time}}</td>
           </tr>
-          {% endfor %}
+          @endforeach
         </tbody>
       </table>
     </div>
