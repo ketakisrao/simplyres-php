@@ -1,11 +1,12 @@
 @extends('app')
 
 @section('content')
-<div class="container">
-	<div class="row">
-        <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+<input id="pac-input" class="controls" type="text" placeholder="Enter a location">
         <div id="map"></div>
-	</div>
+<div class="container">
+        <div class="alert alert-warning" style="display:none;" id="mywarn">
+            Place selected is not a restaurant!
+        </div>
     <div class="row">
     <form class="form-inline right" method="POST" action="" onsubmit="return validate_form()" >
       <input type="text" id="gmaps_id" name="gmaps_id" style="display:none;">
@@ -80,7 +81,7 @@
 }
 
     </style>
-  <script>
+<script>
 // This sample uses the Place Autocomplete widget to allow the user to search
 // for and select a place. The sample then displays an info window containing
 // the place ID and other information about the place that the user has
