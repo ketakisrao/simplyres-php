@@ -2,7 +2,6 @@
 
 use App\Booking;
 use App\Http\Request;
-use Illuminate\Http\Request;
 class HomeController extends Controller {
 
 	/*
