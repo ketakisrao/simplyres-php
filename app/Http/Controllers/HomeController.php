@@ -37,7 +37,7 @@ class HomeController extends Controller {
     
     public function bookings()
     {
-        $bookings = Booking::all();
+        $bookings = Booking::where('username', 'Ketaki');
         return view('bookings',['bookings' => $bookings]);
     }
 
