@@ -1,7 +1,8 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Controllers\Booking;
-
+use App\Booking;
+use App\Http\Request;
+use Illuminate\Http\Request;
 class HomeController extends Controller {
 
 	/*
