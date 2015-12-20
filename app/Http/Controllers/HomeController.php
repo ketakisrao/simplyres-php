@@ -37,7 +37,10 @@ class HomeController extends Controller {
     
     public function bookings()
     {
-        $bookings = Booking::all();
+        $bookings = Booking::where('time', 'time')
+               ->orderBy('username', 'desc')
+               ->take(10)
+               ->get();
         return view('bookings',['bookings' => $bookings]);
     }
 
