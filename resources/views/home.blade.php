@@ -8,8 +8,7 @@
     <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
         <div id="map"></div>
     <br></br>
-    <form class="form-inline right" method="POST" action="" onsubmit="return validate_form()" >
-      <input type="text" id="gmaps_id" name="gmaps_id" style="display:none;">
+    <form class="form-inline right" method="POST" action="bookings" onsubmit="return validate_form()" >
       <input type="text" id="place_name" name="place_name" style="display:none;">
       <input type="text" id="location" name="location" style="display:none;">
       <input type="text" id="phone" name="phone" style="display:none;">
