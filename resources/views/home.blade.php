@@ -1,13 +1,12 @@
 @extends('app')
 
 @section('content')
-<input id="pac-input" class="controls" type="text" placeholder="Enter a location">
-        <div id="map"></div>
-<div class="container">
+<div class="container" style="height:80%; width:90%;">
         <div class="alert alert-warning" style="display:none;" id="mywarn">
             Place selected is not a restaurant!
         </div>
-    <div class="row">
+    <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+        <div id="map"></div>
     <form class="form-inline right" method="POST" action="" onsubmit="return validate_form()" >
       <input type="text" id="gmaps_id" name="gmaps_id" style="display:none;">
       <input type="text" id="place_name" name="place_name" style="display:none;">
@@ -27,7 +26,6 @@
       </div>
       <input type="submit" id="btn-book" class="btn btn-warning" value="Book!">
     </form>
-    </div>
 </div>
     <style>
       html, body {
