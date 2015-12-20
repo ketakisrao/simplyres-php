@@ -20,6 +20,7 @@
                     <td>{{$booking->location}}</td>
                     <td>{{$booking->date}}</td>
                     <td>{{$booking->time}}</td>
+                      <td><button class="btn-primary btn-sm">del</button></td>
                   </tr>
                   @endforeach
                 </tbody>
