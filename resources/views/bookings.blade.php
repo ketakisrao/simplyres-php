@@ -11,6 +11,7 @@
                     <th>Location</th>
                     <th>Date</th>
                     <th>Time</th>
+                      <th>Delete</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -20,7 +21,7 @@
                     <td>{{$booking->location}}</td>
                     <td>{{$booking->date}}</td>
                     <td>{{$booking->time}}</td>
-                      <td><button class="btn-primary btn-sm">del</button></td>
+                    <td><button class="btn-primary btn-sm">Cancel</button></td>
                   </tr>
                   @endforeach
                 </tbody>
