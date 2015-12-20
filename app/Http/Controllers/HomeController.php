@@ -37,8 +37,7 @@ class HomeController extends Controller {
     
     public function bookings()
     {
-        $bookings = Booking::where('time', 'time')
-               ->orderBy('username', 'desc')
+        $bookings = Booking::where('username', 'Ketaki Rao')
                ->take(10)
                ->get();
         return view('bookings',['bookings' => $bookings]);
