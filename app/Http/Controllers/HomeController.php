@@ -58,5 +58,10 @@ class HomeController extends Controller {
     {
         $place_name = Input::get('place_name');
         $booking = new Booking(array('restaurant_name' => $place_name, 'username' => 'Ketaki Rao', 'time' => 'time', 'date' => 'date', 'location' => 'location'));
+        $username = "Ketaki Rao";//Auth::user()->name;
+        $bookings = Booking::where('username', $username)
+               ->take(10)
+               ->get();
+        return view('bookings',['bookings' => $bookings]);
     }
 }
