@@ -19,8 +19,7 @@ Route::get('bookings', 'HomeController@bookings');
 
 Route::post('/delbook', function(){
     if(Request::ajax()){
-        return "ajax called!"
-    
+        return "ajax called!";
     }
 
 });
