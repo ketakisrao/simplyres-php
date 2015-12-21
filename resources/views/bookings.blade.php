@@ -34,14 +34,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript">
 $('.btn-primary').click(function(){
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
     $.ajax({
       url: 'delbook',
       type: "post",
+        beforeSend: function (xhr) {
+            var token = $('meta[name="csrf_token"]').attr('content');
+            if (token){
+                return xhr.setRequestHeader('X-CSRF-TOKEN', token);
+            }
+        },
       data: {'booking_id':$(this).attr('id')},
       success: function(data){
         alert("Deleted successfully");
