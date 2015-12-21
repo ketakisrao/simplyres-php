@@ -66,4 +66,10 @@ class HomeController extends Controller {
         $booking->save();
         return redirect('bookings');
     }
+    
+    public function displayBookings()
+    {
+        $bookings = Booking::all();
+        return Response::json(array('Bookings' => $bookings, 'status_code'=> 200));
+    }
 }
