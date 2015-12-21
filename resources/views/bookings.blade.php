@@ -21,16 +21,17 @@
                     <td>{{$booking->location}}</td>
                     <td>{{$booking->date}}</td>
                     <td>{{$booking->time}}</td>
-                    <td><button id='{{$booking->id}}' class="btn-primary btn-xs" onclick="BtnClick()">Cancel</button></td>
+                    <td><button id='{{$booking->id}}' class="btn-primary btn-xs">Cancel</button></td>
                   </tr>
                   @endforeach
                 </tbody>
               </table>
             </div>
       @else
-            <p>You do not have any bookings, <strong>Make your first one now by clicking on dashboard!</strong></p>
+            <p>You do not have any bookings, <strong>Make your first one now by clicking on Home!</strong></p>
       @endif
     </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript">
 $('.btn-primary').click(function(){
     $.ajax({
