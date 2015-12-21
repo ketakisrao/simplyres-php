@@ -35,9 +35,9 @@ return [
 	],
     
     'twitter' => [
-    'client_id' => env('TWITTER_CLIENT_ID'),
-    'client_secret' => env('TWITTER_CLIENT_SECRET'),
-    'redirect' => env('CALLBACK_URL'),
+    'client_id' => '9d97c5XLZULbJM8ZAqKqpeBH1',
+    'client_secret' => 'IX7UE14q8NtFNLaztIimVfPyDtZve1Po7q6KrnDDN4AZe6mDEe',
+    'redirect' => 'https://simplyresphp-ketakisrao.rhcloud.com/auth/twitter/callback',
  ],
-
+    
 ];
