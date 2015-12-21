@@ -20,7 +20,7 @@
                 <tbody>
                   @foreach($bookings as $booking)
                     <form id='{{$booking->id}}' action="#">
-                        <tr>
+                        <tr id='r{{$booking->id}}'>
                             <td>{{$booking->restaurant_name}}</td>
                             <td>{{$booking->location}}</td>
                             <td>{{$booking->date}}</td>
@@ -47,8 +47,10 @@ $(document).ready(function(){
       $('form').submit(function(e){
           e.preventDefault();
           $.post('delbook', {"booking_id" : $(this).attr("id")}, function(data){
-              if(data==1)
-                  $(this).hide();
+              if(data>0)
+              {
+                  $('#r'+data).hide();
+              }
               else
                   $("#warning").show();
           });

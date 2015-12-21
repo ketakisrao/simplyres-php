@@ -49,9 +49,9 @@ class HomeController extends Controller {
         $data = Input::get('booking_id');
         $deletedRows = Booking::where('id', $data)->delete();
         if($deletedRows>0)
-            return 1;
+            return $data;
         else
-            return 0;
+            return -1;
     }
     
     public function addbooking()
