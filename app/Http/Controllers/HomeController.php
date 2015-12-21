@@ -32,7 +32,8 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('home');
+        $today = date("Y-m-d");
+		return view('home',['today' => $today]);
 	}
     
     public function bookings()

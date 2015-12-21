@@ -19,7 +19,7 @@
         </div>
         <div class="form-group">
             <label>Date:</label>
-            <input placeholder="dd/mm/yy" type="date" class= "form-control" name="date" required = "required">
+            <input placeholder="dd/mm/yy" type="date" min={{today}} class= "form-control" name="date" required = "required">
         </div>
         <div class="form-group">
             <label>Time:</label>
