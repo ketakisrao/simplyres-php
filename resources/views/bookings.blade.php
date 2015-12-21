@@ -37,7 +37,7 @@ $('.btn-primary').click(function(){
     $.ajax({
       url: 'delbook',
       type: "post",
-      data: {'booking_id':$this.attr('id'),'_token': $('input[name=_token]').val()},
+      data: {'booking_id':$(this).attr('id'),'_token': $('input[name=_token]').val()},
       success: function(data){
         alert("Deleted successfully");
       }
