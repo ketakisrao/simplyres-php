@@ -62,9 +62,9 @@ class HomeController extends Controller {
         $booking->username = 'Ketaki Rao';
         $booking->time = 'time';
         $booking->date = 'date';
-        $booking->location = location;
+        $booking->location = 'location';
         
-        
+        $booking->save();
         return redirect('bookings');
     }
 }
