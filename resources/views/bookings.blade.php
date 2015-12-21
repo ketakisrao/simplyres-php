@@ -2,7 +2,9 @@
 
 @section('content')
   <div class="container" >
+      <p id="req"></p>
       @if(count($bookings)>0)
+      <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="table-responsive">          
               <table class="table">
                 <thead>
@@ -32,22 +34,21 @@
       @endif
     </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script type="text/javascript">
-        $.ajaxSetup({
-            headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
-});
-</script>
+
 <script type="text/javascript">
-$('.btn-primary').click(function(){
-    $.ajax({
-      url: 'delbook',
-      type: "post",
-      data: {'booking_id':$(this).attr('id'),'_token': $('input[name=_token]').val()},
-      success: function(data){
-        alert($data);
-      }
-    });      
-});
+    $.ajaxSetup({
+	headers: {
+		'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+	        }
+    });
+    $(document).ready(function(){
+        $post('delbook', {booking_id:$(this).attr('id')}, function(data){
+            console.log(data);
+            $('#req').html(data);
+        
+        });
+    
+    });
 
 </script>
 @endsection
