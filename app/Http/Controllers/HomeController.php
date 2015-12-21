@@ -57,6 +57,6 @@ class HomeController extends Controller {
     public function addbooking()
     {
         $place_name = Input::get('place_name');
-        bookings();
+        $booking = new Booking(array('restaurant_name' => $place_name, 'username' => 'Ketaki Rao', 'time' => 'time', 'date' => 'date', 'location' => 'location'));
     }
 }
