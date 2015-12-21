@@ -37,19 +37,10 @@ class HomeController extends Controller {
     
     public function bookings()
     {
-        if(Request::ajax()){
-            return Response::json(Request::all());
-        }
         $username = "Ketaki Rao";//Auth::user()->name;
         $bookings = Booking::where('username', $username)
                ->take(10)
                ->get();
         return view('bookings',['bookings' => $bookings]);
-    }
-    
-    public function delbooking(){
-        if(Request::ajax()){
-            return Response::json(Request::all());
-        }
     }
 }
