@@ -41,7 +41,7 @@ $(document).ready(function(){
         });
       $('form').submit(function(e){
           e.preventDefault();
-          $.post('delbook', {booking_id : $(this).attr("id")}, function(data){
+          $.post('delbook', {"booking_id" : $(this).attr("id")}, function(data){
               console.log(data);
           });
       }); 

@@ -47,7 +47,7 @@ class HomeController extends Controller {
     public function delbooking()
     {
         $data = json_decode(Input::all());
-        return $data;
+        return $data->booking_id;
         //return "Bad choice";
     }
 }
