@@ -43,4 +43,9 @@ class HomeController extends Controller {
                ->get();
         return view('bookings',['bookings' => $bookings]);
     }
+    
+    public function delbooking($id)
+    {
+        return 1;
+    }
 }
