@@ -16,11 +16,13 @@ Route::get('/', 'WelcomeController@index');
 Route::get('home', 'HomeController@index');
 
 Route::get('bookings', 'HomeController@bookings');
+
 Route::post('/delbook', function(){
     if(Request::ajax()){
-        return var_dump(Response::json(Request::all()));
+        return "ajax called!"
+    
     }
-    return "wrong";
+
 });
 Route::controllers([
 	'auth' => 'Auth\AuthController',

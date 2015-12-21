@@ -203,11 +203,8 @@ body {
               <p>Ketaki Rao</p>
             </div>
           </div>
-
         </div>
-
       </div>
-
     </div>
         <script src="{{ asset('/js/bootstrap.js') }}"></script>
 	</body>

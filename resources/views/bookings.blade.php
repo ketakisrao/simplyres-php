@@ -2,9 +2,7 @@
 
 @section('content')
   <div class="container" >
-      <p id="req"></p>
       @if(count($bookings)>0)
-      <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="table-responsive">          
               <table class="table">
                 <thead>
@@ -23,7 +21,7 @@
                     <td>{{$booking->location}}</td>
                     <td>{{$booking->date}}</td>
                     <td>{{$booking->time}}</td>
-                    <td><button id='{{$booking->id}}' class="btn-primary btn-xs">Cancel</button></td>
+                    <td><form id='{{$booking->id}}' action="#"><input type="hidden" name="_token" value="{{ csrf_token() }}"><button type="submit"  class="btn-primary btn-xs">Cancel</button></td>
                   </tr>
                   @endforeach
                 </tbody>
@@ -34,23 +32,17 @@
       @endif
     </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
 <script type="text/javascript">
     $.ajaxSetup({
-	headers: {
-		'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-	        }
-    });
-    $(document).ready(function(){
-        $(".btn-primary").click(function(){
-            var b_id = $(this).attr('id');
-        $.post('delbook', {booking_id: b_id}, function(data){
-            console.log(data);
-            $('#req').html(data);
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         });
-        });
-    
-    });
-
+$(document).ready(function(){
+  $('form').submit(function(e){
+      $.post('delbook', {booking_id : $(this).attr("id")}, function(data){
+          console.log(data);
+      });
+  }); 
+});
 </script>
 @endsection

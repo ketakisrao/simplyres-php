@@ -16,7 +16,7 @@ class VerifyCsrfToken extends BaseVerifier {
 	{
 		return parent::handle($request, $next);
 	}
-
+    
      /**
      * Determine if the session and input CSRF tokens match.
      *
