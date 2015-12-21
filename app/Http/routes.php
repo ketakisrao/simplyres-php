@@ -23,7 +23,7 @@ Route::post('delbook', function(){
         /*if($id==3)
             return Response::json(Request::all());
         else*/
-        return "Sadness! :(" . $id;
+        return "Sadness! :(";
     }
 });
 Route::controllers([
