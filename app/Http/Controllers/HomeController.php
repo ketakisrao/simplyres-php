@@ -2,6 +2,7 @@
 use Input;
 use App\Booking;
 use App\Http\Request;
+use App\Http\Response;
 class HomeController extends Controller {
 
 	/*
@@ -70,6 +71,6 @@ class HomeController extends Controller {
     public function displayBookings()
     {
         $bookings = Booking::all();
-        return Response::json(array('User' => "Hey!", 'status_code'=> 200));
+        return $bookings;
     }
 }
