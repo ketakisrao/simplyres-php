@@ -9,22 +9,23 @@
         <div id="map"></div>
     <br></br>
     <form class="form-inline right" method="POST" action="addbooking" onsubmit="return validate_form()" >
-      <input type="text" id="place_name" name="place_name" style="display:none;">
-      <input type="text" id="location" name="location" style="display:none;">
-      <input type="text" id="phone" name="phone" style="display:none;">
-      <div class="form-group">
-        <label>Number of people:</label>
-        <input type="number" min="1" max="16" class="form-control" name="nofppl" required = "required">
-      </div>
-      <div class="form-group">
-        <label>Date:</label>
-        <input placeholder="dd/mm/yy" type="date" class= "form-control" name="date" required = "required">
-      </div>
-      <div class="form-group">
-        <label>Time:</label>
-        <input type=time max=21:00 min=12:00 step=3600 class="form-control" name="time" required = "required">
-      </div>
-      <input type="submit" id="btn-book" class="btn btn-warning" value="Book!">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <input type="text" id="place_name" name="place_name" style="display:none;">
+        <input type="text" id="location" name="location" style="display:none;">
+        <input type="text" id="phone" name="phone" style="display:none;">
+        <div class="form-group">
+            <label>Number of people:</label>
+            <input type="number" min="1" max="16" class="form-control" name="nofppl" required = "required">
+        </div>
+        <div class="form-group">
+            <label>Date:</label>
+            <input placeholder="dd/mm/yy" type="date" class= "form-control" name="date" required = "required">
+        </div>
+        <div class="form-group">
+            <label>Time:</label>
+            <input type=time max=21:00 min=12:00 step=3600 class="form-control" name="time" required = "required">
+        </div>
+        <input type="submit" id="btn-book" class="btn btn-warning" value="Book!">
     </form>
 <br><br>
 </div>
