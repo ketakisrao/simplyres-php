@@ -25,7 +25,7 @@ Route::get('auth/twitter', 'Auth\AuthController@redirectToProvider');
 
 Route::get('auth/twitter/callback', 'Auth\AuthController@handleProviderCallback');
 
-Route::get('/api/bookings', 'HomeController@displayBookings');
+Route::get('/api/bookings', 'WelcomeController@displayBookings');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
