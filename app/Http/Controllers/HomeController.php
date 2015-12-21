@@ -43,4 +43,10 @@ class HomeController extends Controller {
                ->get();
         return view('bookings',['bookings' => $bookings]);
     }
+    public function delbooking(){
+    if(Request::ajax()){
+        return Response::json(Request::all());
+    }
+
+}
 }
