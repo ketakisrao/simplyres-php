@@ -47,7 +47,8 @@ class HomeController extends Controller {
     public function delbooking()
     {
         $data = Input::get('booking_id');
-        return $data;
+        $deletedRows = Booking::where('id', $data)->delete();
+        return $deletedRows;
         //return "Bad choice";
     }
 }
