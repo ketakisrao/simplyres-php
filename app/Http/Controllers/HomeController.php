@@ -46,7 +46,9 @@ class HomeController extends Controller {
     public function delbooking()
     {
         if(Request::ajax()) {
-            $data = Input::all();die;
+            $data = Input::all();
+            print_r($data);
+            die;
         }
     }
 }
