@@ -20,10 +20,10 @@ Route::get('bookings', 'HomeController@bookings');
 Route::post('delbook', function(){
     if(Request::ajax()){
         $id = HomeController::delbooking(3);
-        if($id==3)
+        /*if($id==3)
             return Response::json(Request::all());
-        else
-            return "Sadness! :(";
+        else*/
+        return "Sadness! :(" . $id;
     }
 });
 Route::controllers([
