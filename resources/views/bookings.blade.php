@@ -21,7 +21,7 @@
                     <td>{{$booking->location}}</td>
                     <td>{{$booking->date}}</td>
                     <td>{{$booking->time}}</td>
-                    <td><button class="btn-primary btn-xs">Cancel</button></td>
+                    <td><button id='{{$booking->id}}' class="btn-primary btn-xs" onclick="BtnClick()">Cancel</button></td>
                   </tr>
                   @endforeach
                 </tbody>
@@ -31,4 +31,17 @@
             <p>You do not have any bookings, <strong>Make your first one now by clicking on dashboard!</strong></p>
       @endif
     </div>
+<script type="text/javascript">
+$('.btn-primary').click(function(){
+    $.ajax({
+      url: 'delbook',
+      type: "post",
+      data: {'booking_id':$this.attr('id'),'_token': $('input[name=_token]').val()},
+      success: function(data){
+        alert("Deleted successfully");
+      }
+    });      
+});
+
+</script>
 @endsection

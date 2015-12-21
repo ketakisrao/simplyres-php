@@ -16,7 +16,7 @@ Route::get('/', 'WelcomeController@index');
 Route::get('home', 'HomeController@index');
 
 Route::get('bookings', 'HomeController@bookings');
-
+Route::post('delbook', 'HomeController@delbooking');
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

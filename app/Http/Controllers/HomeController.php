@@ -1,5 +1,5 @@
 <?php namespace App\Http\Controllers;
-
+use Input;
 use App\Booking;
 use App\Http\Request;
 class HomeController extends Controller {
@@ -42,5 +42,12 @@ class HomeController extends Controller {
                ->take(10)
                ->get();
         return view('bookings',['bookings' => $bookings]);
+    }
+    public function delbooking()
+    {
+        if(Request::ajax()) {
+            $data = Input::all();
+            return view('bookings', ['bookings' => $bookings]);
+        }
     }
 }
