@@ -5,6 +5,7 @@ use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\Registrar;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Socialize;
+use App\User;
 class AuthController extends Controller {
 
 	/*
@@ -71,7 +72,7 @@ class AuthController extends Controller {
      */
     private function findOrCreateUser($twitterUser)
     {
-        $authUser = User::where('twitter_id', $twitterUser->id)->first();
+        $authUser = User::where('name', $twitterUser->name)->first();
  
         if ($authUser){
             return $authUser;
