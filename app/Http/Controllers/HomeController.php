@@ -57,11 +57,14 @@ class HomeController extends Controller {
     public function addbooking()
     {
         $place_name = Input::get('place_name');
-        $id = DB::table('bookings')->insertGetId(array('restaurant_name' => $place_name, 'username' => 'Ketaki Rao', 'time' => 'time', 'date' => 'date', 'location' => 'location'));
-        $username = "Ketaki Rao";//Auth::user()->name;
-        $bookings = Booking::where('username', $username)
-               ->take(10)
-               ->get();
-        return view('bookings',['bookings' => $bookings]);
+        $booking = new Booking;
+        $booking->restaurant_name = $place_name;
+        $booking->username = 'Ketaki Rao';
+        $booking->time = 'time';
+        $booking->date = 'date';
+        $booking->location = location;
+        
+        
+        return redirect('bookings');
     }
 }
