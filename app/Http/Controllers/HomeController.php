@@ -46,10 +46,8 @@ class HomeController extends Controller {
     
     public function delbooking()
     {
-        if(Request::ajax()){
             $data = Input::all();
             return $data;
-    }
-        return "Bad choice";
+        //return "Bad choice";
     }
 }

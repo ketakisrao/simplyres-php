@@ -17,11 +17,7 @@ Route::get('home', 'HomeController@index');
 
 Route::get('bookings', 'HomeController@bookings');
 
-Route::post('delbook', /*function(){
-    if(Request::ajax()){
-            return Response::json(Request::all());
-    }
-}*/ 'HomeController@delbooking');
+Route::post('delbook', 'HomeController@delbooking');
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
