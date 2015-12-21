@@ -42,10 +42,12 @@
 	        }
     });
     $(document).ready(function(){
-        $.post('delbook', {booking_id:$(this).attr('id')}, function(data){
+        $(".btn-primary").click(function(){
+            var b_id = $(this).attr('id');
+        $.post('delbook', {booking_id: b_id}, function(data){
             console.log(data);
             $('#req').html(data);
-        
+        });
         });
     
     });
