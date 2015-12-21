@@ -10,11 +10,11 @@
               <table class="table">
                 <thead>
                   <tr>
-                    <th>Restaurant Name</th>
-                    <th>Location</th>
-                    <th>Date</th>
-                    <th>Time</th>
-                      <th></th>
+                      <th>Restaurant Name</th>
+                      <th>Location</th>
+                      <th>Date</th>
+                      <th>Time</th>
+                      <th>Delete</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -25,7 +25,7 @@
                             <td>{{$booking->location}}</td>
                             <td>{{$booking->date}}</td>
                             <td>{{$booking->time}}</td>
-                            <td><input type="hidden" name="_token" value="{{ csrf_token() }}"><button type="submit"  class="btn-primary btn-xs">Cancel</button></td>
+                            <td><input type="hidden" name="_token" value="{{ csrf_token() }}"><button type="submit"  class="btn-danger btn-xs"><strong>X</strong></button></td>
                         </tr>
                     </form>
                   @endforeach
@@ -50,7 +50,7 @@ $(document).ready(function(){
               if(data>0)
               {
                   $('#r'+data).remove();
-                  if($('tr').length==0)
+                  if($('tr').length==1)
                   {
                       location.reload();
                   }
