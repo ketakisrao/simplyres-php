@@ -2,7 +2,7 @@
 
 @section('content')
   <div class="container" >
-      @if(!empty($bookings))
+      @if(count($bookings)>0)
             <div class="table-responsive">          
               <table class="table">
                 <thead>
