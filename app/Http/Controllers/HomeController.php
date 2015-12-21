@@ -46,8 +46,7 @@ class HomeController extends Controller {
     public function delbooking()
     {
         if(Request::ajax()) {
-            $data = Input::all();
-            return view('bookings', ['bookings' => $bookings]);
+            $data = Input::all();die;
         }
     }
 }
