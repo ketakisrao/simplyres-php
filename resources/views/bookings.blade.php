@@ -1,7 +1,10 @@
 @extends('app')
 
 @section('content')
-  <div class="container" >
+  <div class="container">
+      <div class="alert alert-warning" style="display:none;" id="warning">
+            Booking could not be deleted, please try again!
+      </div>
       @if(count($bookings)>0)
             <div class="table-responsive">          
               <table class="table">
@@ -16,13 +19,15 @@
                 </thead>
                 <tbody>
                   @foreach($bookings as $booking)
-                  <tr>
-                    <td>{{$booking->restaurant_name}}</td>
-                    <td>{{$booking->location}}</td>
-                    <td>{{$booking->date}}</td>
-                    <td>{{$booking->time}}</td>
-                    <td><form id='{{$booking->id}}' action="#"><input type="hidden" name="_token" value="{{ csrf_token() }}"><button type="submit"  class="btn-primary btn-xs">Cancel</button></td>
-                  </tr>
+                    <form id='{{$booking->id}}' action="#">
+                        <tr>
+                            <td>{{$booking->restaurant_name}}</td>
+                            <td>{{$booking->location}}</td>
+                            <td>{{$booking->date}}</td>
+                            <td>{{$booking->time}}</td>
+                            <td><input type="hidden" name="_token" value="{{ csrf_token() }}"><button type="submit"  class="btn-primary btn-xs">Cancel</button></td>
+                        </tr>
+                    </form>
                   @endforeach
                 </tbody>
               </table>
@@ -43,9 +48,9 @@ $(document).ready(function(){
           e.preventDefault();
           $.post('delbook', {"booking_id" : $(this).attr("id")}, function(data){
               if(data==1)
-                console.log("Success");
+                  $(this).hide();
               else
-                  console.log("Couldn't delete");
+                  $("#warning").show();
           });
       }); 
 });
