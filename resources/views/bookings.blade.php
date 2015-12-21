@@ -49,7 +49,11 @@ $(document).ready(function(){
           $.post('delbook', {"booking_id" : $(this).attr("id")}, function(data){
               if(data>0)
               {
-                  $('#r'+data).hide();
+                  $('#r'+data).remove();
+                  if($('tr').length==0)
+                  {
+                      location.reload();
+                  }
               }
               else
                   $("#warning").show();
