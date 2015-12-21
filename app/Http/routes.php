@@ -18,6 +18,8 @@ Route::get('home', 'HomeController@index');
 Route::get('bookings', 'HomeController@bookings');
 
 Route::post('delbook', 'HomeController@delbooking');
+
+Route::post('addbooking', 'HomeController@addbooking');
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

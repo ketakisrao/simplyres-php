@@ -48,7 +48,15 @@ class HomeController extends Controller {
     {
         $data = Input::get('booking_id');
         $deletedRows = Booking::where('id', $data)->delete();
-        return $deletedRows;
-        //return "Bad choice";
+        if($deletedRows>0)
+            return 1;
+        else
+            return 0;
+    }
+    
+    public function addbooking()
+    {
+        $place_name = Input::get('place_name');
+        bookings();
     }
 }

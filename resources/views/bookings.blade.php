@@ -42,7 +42,10 @@ $(document).ready(function(){
       $('form').submit(function(e){
           e.preventDefault();
           $.post('delbook', {"booking_id" : $(this).attr("id")}, function(data){
-              console.log(data);
+              if(data==1)
+                console.log("Success");
+              else
+                  console.log("Couldn't delete");
           });
       }); 
 });
