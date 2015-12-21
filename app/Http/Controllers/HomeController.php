@@ -44,8 +44,8 @@ class HomeController extends Controller {
         return view('bookings',['bookings' => $bookings]);
     }
     
-    public function delbooking($id)
+    public function delbooking()
     {
-        return $id;
+        return "Bad choice";
     }
 }

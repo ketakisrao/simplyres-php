@@ -17,15 +17,11 @@ Route::get('home', 'HomeController@index');
 
 Route::get('bookings', 'HomeController@bookings');
 
-Route::post('delbook', function(){
+Route::post('delbook', /*function(){
     if(Request::ajax()){
-        $id = App::make('HomeController')->delbooking(3);
-        if($id==3)
             return Response::json(Request::all());
-        else
-        return "Sadness! :(";
     }
-});
+}*/ 'HomeController@delbooking');
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
