@@ -25,9 +25,7 @@ Route::get('auth/twitter', 'Auth\AuthController@redirectToProvider');
 
 Route::get('auth/twitter/callback', 'Auth\AuthController@handleProviderCallback');
 
-Route::get('/api/bookings', function(){
-return Response::json(array('User' => "Ketaki", 'status_code'=> 200));
-});
+Route::get('/api/bookings', 'HomeController@displayBookings');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
