@@ -33,16 +33,16 @@
     </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript">
-    $.ajaxSetup({
+$(document).ready(function(){
+        $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }});
-$(document).ready(function(){
-  $('form').submit(function(e){
-      $.post('delbook', {booking_id : $(this).attr("id")}, function(data){
-          console.log(data);
-      });
-  }); 
+      $('form').submit(function(e){
+          $.post('delbook', {booking_id : $(this).attr("id")}, function(data){
+              console.log(data);
+          });
+      }); 
 });
 </script>
 @endsection

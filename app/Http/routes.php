@@ -17,7 +17,7 @@ Route::get('home', 'HomeController@index');
 
 Route::get('bookings', 'HomeController@bookings');
 
-Route::post('/delbook', function(){
+Route::post('delbook', function(){
     if(Request::ajax()){
         return "ajax called!";
     }
