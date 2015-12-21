@@ -72,14 +72,14 @@ class AuthController extends Controller {
      */
     private function findOrCreateUser($twitterUser)
     {
-        $authUser = User::where('name', $twitterUser->name)->first();
+        $authUser = User::where('name', $twitterUser->nickname)->first();
  
         if ($authUser){
             return $authUser;
         }
  
         return User::create([
-            'name' => $twitterUser->name
+            'name' => $twitterUser->nickname
         ]);
     }
 
