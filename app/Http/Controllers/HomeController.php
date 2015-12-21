@@ -46,6 +46,6 @@ class HomeController extends Controller {
     
     public function delbooking($id)
     {
-        return 1;
+        return $id;
     }
 }

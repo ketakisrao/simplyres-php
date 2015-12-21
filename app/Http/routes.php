@@ -19,7 +19,11 @@ Route::get('bookings', 'HomeController@bookings');
 
 Route::post('delbook', function(){
     if(Request::ajax()){
-        return Response::json(Request::all());
+        $variable = HomeController::delbooking(3);
+        if($id==3)
+            return Response::json(Request::all());
+        else
+            return "Sadness! :(";
     }
 
 });
