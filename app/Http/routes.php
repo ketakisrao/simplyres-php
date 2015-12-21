@@ -15,6 +15,8 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
 
+Route::get('api/bookings', 'HomeController@diplay_bookings');
+
 Route::get('bookings', 'HomeController@bookings');
 
 Route::post('delbook', 'HomeController@delbooking');

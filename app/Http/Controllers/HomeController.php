@@ -65,4 +65,10 @@ class HomeController extends Controller {
         $booking->save();
         return redirect('bookings');
     }
+    
+    public function display_bookings()
+    {
+        $bookings = Booking::all();
+        return $bookings;
+    }
 }

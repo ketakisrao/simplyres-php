@@ -14,7 +14,7 @@
                       <th>Location</th>
                       <th>Date</th>
                       <th>Time</th>
-                      <th>Delete</th>
+                      <th>Cancel</th>
                   </tr>
                 </thead>
                 <tbody>
