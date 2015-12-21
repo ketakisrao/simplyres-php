@@ -58,7 +58,7 @@ class HomeController extends Controller {
     {
         $booking = new Booking;
         $booking->restaurant_name = Input::get('place_name');
-        $booking->username = 'Ketaki Rao';
+        $booking->username = \Auth::user()->name;
         $booking->time = Input::get('time');
         $booking->date = Input::get('date');
         $booking->location = Input::get('location');
