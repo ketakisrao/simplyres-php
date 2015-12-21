@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 use Input;
+use Request;
 use App\Booking;
 use App\Http\Request;
 class HomeController extends Controller {
@@ -37,12 +38,6 @@ class HomeController extends Controller {
     
     public function bookings()
     {
-        if(Request::ajax())
-        {
-            $data = Input::all();
-            print_r($data);
-            die;
-        }
         $username = "Ketaki Rao";//Auth::user()->name;
         $bookings = Booking::where('username', $username)
                ->take(10)
