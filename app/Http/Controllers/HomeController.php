@@ -47,7 +47,7 @@ class HomeController extends Controller {
     public function delbooking()
     {
         $data = Input::all();
-        return $data.booking_id;
+        return $data.booking_id . "   Booking id";
         //return "Bad choice";
     }
 }
