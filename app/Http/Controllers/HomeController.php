@@ -37,7 +37,7 @@ class HomeController extends Controller {
     
     public function bookings()
     {
-        $username = "Ketaki Rao";//Auth::user()->name;
+        $username = \Auth::user()->name;
         $bookings = Booking::where('username', $username)
                ->take(10)
                ->get();
