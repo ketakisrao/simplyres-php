@@ -21,6 +21,10 @@ Route::post('delbook', 'HomeController@delbooking');
 
 Route::post('addbooking', 'HomeController@addbooking');
 
+Route::get('auth/twitter', 'Auth\AuthController@redirectToProvider');
+
+Route::get('auth/twitter/callback', 'Auth\AuthController@handleProviderCallback');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
