@@ -50,5 +50,6 @@ class HomeController extends Controller {
             print_r($data);
             die;
         }
+        return "Successfully called!";
     }
 }

@@ -45,7 +45,7 @@ $('.btn-primary').click(function(){
         },
       data: {'booking_id':$(this).attr('id')},
       success: function(data){
-        alert("Deleted successfully");
+        alert($data);
       }
     });      
 });
