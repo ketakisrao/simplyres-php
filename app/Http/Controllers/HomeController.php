@@ -1,8 +1,6 @@
 <?php namespace App\Http\Controllers;
 use Input;
 use App\Booking;
-use App\Http\Request;
-use App\Http\Response;
 class HomeController extends Controller {
 
 	/*

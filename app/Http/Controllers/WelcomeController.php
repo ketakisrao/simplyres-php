@@ -1,6 +1,5 @@
 <?php namespace App\Http\Controllers;
 use App\Booking;
-use App\Http\Response;
 class WelcomeController extends Controller {
 
 	/*
@@ -34,4 +33,9 @@ class WelcomeController extends Controller {
 		return view('welcome');
 	}
     
+    public function displayBookings()
+    {
+        $bookings = Booking::all();
+        return $bookings;
+    }
 }
