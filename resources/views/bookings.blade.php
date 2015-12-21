@@ -2,6 +2,7 @@
 
 @section('content')
   <div class="container" >
+      {{$bookings}}
       @if($bookings)
             <div class="table-responsive">          
               <table class="table">
