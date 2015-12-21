@@ -54,18 +54,13 @@ class AuthController extends Controller {
      */
     public function handleProviderCallback()
     {
-//        try {
-//            $user = Socialite::driver('twitter')->user();
-//        } catch (Exception $e) {
-//            return redirect('auth/twitter');
-//        }
-// 
-//        $authUser = $this->findOrCreateUser($user);
-// 
-//        Auth::login($authUser, true);
-// 
-//        return redirect()->route('home');
-        $user = Socialize::with('twitter')->user();
+        
+        $authUser = $this->findOrCreateUser($user);
+ 
+        Auth::login($authUser, true);
+ 
+        return redirect()->route('home');
+        //$user = Socialize::with('twitter')->user();
     }
  
     /**
