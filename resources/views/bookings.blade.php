@@ -32,18 +32,17 @@
       @endif
     </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $.ajaxSetup({
+            headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
+});
+</script>
 <script type="text/javascript">
 $('.btn-primary').click(function(){
     $.ajax({
       url: 'delbook',
       type: "post",
-        beforeSend: function (xhr) {
-            var token = $('meta[name="csrf_token"]').attr('content');
-            if (token){
-                return xhr.setRequestHeader('X-CSRF-TOKEN', token);
-            }
-        },
-      data: {'booking_id':$(this).attr('id')},
+      data: {'booking_id':$(this).attr('id'),'_token': $('input[name=_token]').val()},
       success: function(data){
         alert($data);
       }
