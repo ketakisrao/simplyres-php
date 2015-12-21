@@ -42,7 +42,7 @@
 	        }
     });
     $(document).ready(function(){
-        $post('delbook', {booking_id:$(this).attr('id')}, function(data){
+        $.post('delbook', {booking_id:$(this).attr('id')}, function(data){
             console.log(data);
             $('#req').html(data);
         
