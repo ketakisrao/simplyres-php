@@ -32,10 +32,4 @@ class WelcomeController extends Controller {
 	{
 		return view('welcome');
 	}
-    
-    public function displayBookings()
-    {
-        $bookings = Booking::all();
-        return $bookings;
-    }
 }
