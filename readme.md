@@ -8,13 +8,14 @@ This application is built on Laravel -- A php based web framework. The backend u
 
 If you want a copy of this application up and running on your local machines, do the following:
 
-
++ Install Laravel at [Laravel](http://laravel.com/docs/5.0 "Laravel 5 Docs")
 + Make a folder and cd into it.
-+ Clone the repository using git clone https://github.com/ketakisrao/SimplyResPhp.git
++ Clone the repository using git clone https://github.com/ketakisrao/simplyres-php.git
 + cd to simplyresphp/
-+ Update composer using : composer update
-+ To run this application cd simplyresphp and php artisan serve
++ Install dependencies using : composer install
++ To run this application use php artisan serve
 + Simplyres! should now be running on http://localhost:8080/
++ To configure the database : copy the app/config/database.php in app/config/local and edit it to match your local database settings
 
 
 ##### If you wish to access features like Login Twitter please use the Openshift site as the features will not work on your local machines. Please use a HTML5 compatible browser for the application since it contains a few elements from HTML5.
