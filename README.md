@@ -10,7 +10,7 @@ If you want a copy of this application up and running on your local machines, do
 
 
 + Make a folder and cd into it.
-+ Clone the repository using git clone https://github.com/ketakisrao/Simplyresphp.git
++ Clone the repository using git clone https://github.com/ketakisrao/SimplyResPhp.git
 + cd to simplyresphp/
 + Update composer using : composer update
 + To run this application cd simplyresphp and php artisan serve
