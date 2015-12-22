@@ -12,8 +12,8 @@ If you want a copy of this application up and running on your local machines, do
 + Make a folder and cd into it.
 + Clone the repository using git clone https://github.com/ketakisrao/simplyres-php.git
 + cd to simplyresphp/
-+ Install dependencies using : composer install
-+ To run this application use php artisan serve
++ Install dependencies using : `composer install`
++ To run this application use `php artisan serve`
 + Simplyres! should now be running on http://localhost:8080/
 + To configure the database : copy the config/database.php in config/local and edit it to match your local database settings
 
