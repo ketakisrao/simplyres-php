@@ -3,7 +3,7 @@ Simply Res!
 SimplyRes allows you to make reservations at restaurants, SimplyReserve!
 
 
-This application is built on Django -- A python based web framework. The backend used is SqLite3 and the site has been deployed on Openshift (Red Hat Cloud) at [SimplyRes](https://simplyresphp-ketakisrao.rhcloud.com "SimplyRes!").
+This application is built on Laravel -- A php based web framework. The backend used is MySQL and the site has been deployed on Openshift (Red Hat Cloud) at [SimplyRes](https://simplyresphp-ketakisrao.rhcloud.com "SimplyRes!").
 
 
 If you want a copy of this application up and running on your local machines, do the following:
@@ -11,9 +11,9 @@ If you want a copy of this application up and running on your local machines, do
 
 + Make a folder and cd into it.
 + Clone the repository using git clone https://github.com/ketakisrao/Simplyresphp.git
-+ cd to simplyres/
-+ Install the app using python setup.py install
-+ To run this application cd wsgi/openshift/ and then python manage.py runserver
++ cd to simplyresphp/
++ Update composer using : composer update
++ To run this application cd simplyresphp and php artisan serve
 + Simplyres! should now be running on http://localhost:8080/
 
 
