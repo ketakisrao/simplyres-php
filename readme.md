@@ -11,7 +11,7 @@ If you want a copy of this application up and running on your local machines, do
 + Install Laravel at [Laravel](http://laravel.com/docs/5.0 "Laravel 5 Docs")
 + Make a folder and cd into it.
 + Clone the repository using git clone https://github.com/ketakisrao/simplyres-php.git
-+ cd to simplyresphp/
++ `cd simplyresphp/`
 + Install dependencies using : `composer install`
 + To run this application use `php artisan serve`
 + Simplyres! should now be running on http://localhost:8080/
