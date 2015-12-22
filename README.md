@@ -31,6 +31,7 @@ After Installation
 + Choose a date and timing for the booking.
 + Hit Book! to confirm the booking
 + Navigate to the bookings tab to be able to view your bookings.
++ You can now cancel bookings by clicking on the delete button next to it.
 
 
 REST API
@@ -40,3 +41,5 @@ SimplyRes has REST API for the following
 + To view the bookings made by people.
 
 To View Bookings, navigate to domain_name/api/bookings
+
+######Make sure to be signed in while accessing the api
