@@ -15,7 +15,7 @@ If you want a copy of this application up and running on your local machines, do
 + Install dependencies using : composer install
 + To run this application use php artisan serve
 + Simplyres! should now be running on http://localhost:8080/
-+ To configure the database : copy the app/config/database.php in app/config/local and edit it to match your local database settings
++ To configure the database : copy the config/database.php in config/local and edit it to match your local database settings
 
 
 ##### If you wish to access features like Login Twitter please use the Openshift site as the features will not work on your local machines. Please use a HTML5 compatible browser for the application since it contains a few elements from HTML5.
